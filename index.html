@@ -6,6 +6,68 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Stanley Arts</title>
     <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* Gallery Section Styles */
+      #gallery {
+        background-color: #f0f0f0; /* Light gray background */
+        padding: 40px 20px; /* Add some padding for better spacing */
+      }
+
+      #gallery h2 {
+        color: #333; /* Dark gray color for headings */
+        text-align: center; /* Center align headings */
+        margin-bottom: 20px; /* Add some margin for better spacing */
+      }
+
+      .gallery-container {
+        display: grid; /* Use grid for layout */
+        grid-template-columns: repeat(3, 1fr); /* Create three equal columns */
+        gap: 10px; /* Add space between grid items */
+      }
+
+      .last-three-gallery {
+        display: grid; /* Use grid for layout */
+        grid-template-columns: repeat(3, 1fr); /* Create three equal columns */
+        gap: 10px; /* Add space between grid items */
+        margin-top: 20px; /* Add margin to separate from the top images */
+      }
+
+      .gallery-item {
+        border-radius: 5px; /* Optional: add border radius */
+        overflow: hidden; /* Clip overflow for a cleaner look */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: add some shadow for depth */
+      }
+
+      .gallery-item img {
+        width: 100%; /* Set images to fill their parent's width */
+        height: auto; /* Maintain aspect ratio */
+        object-fit: cover; /* Fill the container, maintaining aspect ratio */
+      }
+
+      .gallery-item p {
+        font-size: 16px; /* Adjust the font size for item titles */
+        text-align: center; /* Center align text */
+        padding: 10px; /* Add padding for better spacing */
+      }
+
+      /* Media Queries for Responsiveness */
+      @media (max-width: 768px) {
+        .gallery-container,
+        .last-three-gallery {
+          grid-template-columns: repeat(
+            2,
+            1fr
+          ); /* Two items per row for tablets */
+        }
+      }
+
+      @media (max-width: 480px) {
+        .gallery-container,
+        .last-three-gallery {
+          grid-template-columns: 1fr; /* One item per row on small screens */
+        }
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -32,7 +94,6 @@
           <li><a href="#about">About</a></li>
           <li><a href="#prices">Prices</a></li>
           <li><a href="#video">Video</a></li>
-          <!-- Added link to Video -->
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
@@ -113,6 +174,31 @@
           <p>Artwork Title 9</p>
         </div>
       </div>
+
+      <!-- Last three images fixed at the bottom -->
+      <div class="last-three-gallery">
+        <div class="gallery-item">
+          <img
+            src="gallery/Screen Shot 2025-01-23 at 2.45.37 PM.png"
+            alt="Art 10"
+          />
+          <p>Artwork Title 10</p>
+        </div>
+        <div class="gallery-item">
+          <img
+            src="gallery/Screen Shot 2025-01-23 at 2.46.18 PM.png"
+            alt="Art 11"
+          />
+          <p>Artwork Title 11</p>
+        </div>
+        <div class="gallery-item">
+          <img
+            src="gallery/Screen Shot 2025-01-23 at 2.46.09 PM.png"
+            alt="Art 12"
+          />
+          <p>Artwork Title 12</p>
+        </div>
+      </div>
     </section>
 
     <section id="prices">
@@ -135,28 +221,58 @@
           </tr>
           <tr>
             <td>A3</td>
-            <td>sh. 100,000</td>
-          </tr>
-          <tr>
-            <td>A4</td>
-            <td>sh. 50,000</td>
-          </tr>
-          <tr>
-            <td>A5</td>
-            <td>sh. 30,000</td>
+            <td>sh. 150,000</td>
           </tr>
         </tbody>
       </table>
     </section>
 
-    <!-- Video Section Added -->
+    <!-- Video Section -->
     <section id="video">
-      <h2>Watch Our Latest Video</h2>
+      <h2>Video Gallery</h2>
       <div class="video-container">
-        <video controls>
-          <source src="gallery/Download.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+        <div class="video-item">
+          <p>Video Title 1</p>
+          <video controls>
+            <source src="gallery/Download(1).mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <p>Video Title 2</p>
+        </div>
+        <div class="video-item">
+          <video controls>
+            <source src="gallery/Download(2).mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <p>Video Title 3</p>
+        </div>
+        <div class="video-item">
+          <video controls>
+            <source src="gallery/Download(3).mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <p>Video Title 4</p>
+        </div>
+        <div class="video-item">
+          <video controls>
+            <source src="gallery/Download(4).mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <p>Video Title 5</p>
+        </div>
+        <div class="video-item">
+          <video controls>
+            <source src="gallery/Download(5).mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <p>Video Title 6</p>
+        </div>
+        <div class="video-item">
+          <video controls>
+            <source src="gallery/Download(7).mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
       </div>
     </section>
 
@@ -191,10 +307,9 @@
           >TikTok</a
         >
       </p>
-      <p>Contact 0752811909 for website develpoment at only sh.10,000</p>
+      <p>Contact 0752811909 for website development at only sh.10,000</p>
     </footer>
 
     <script src="script.js"></script>
-    <!-- Link to JavaScript -->
   </body>
 </html>
